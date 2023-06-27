@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Estudante</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+  
+<body>
+  <h1 style="text-align: center;">Editar {{estudante.nome}}</h1>
+  <form action="/edit/{{estudante.id}}" method="POST" class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" name="nome" id="nome" placeholder="Digite o nome" class="form-control" value="{{estudante.nome}}">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="idade">Idade:</label>
+          <input type="text" name="idade" id="idade" placeholder="Digite a idade" class="form-control" value="{{estudante.idade}}">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <button type="submit" class="btn btn-block btn-success">Editar</button>
+      </div>
+    </div>
+  </form>
+</body>
+</html>
